@@ -1,135 +1,38 @@
-/* Different color for bold*/
+@import 'base/headings.scss', 'base/resource_tree.scss';
+
 .cm-strong,
 .markdown-preview-section strong {
   color: #f8d753 !important;
 }
 
-body {
-  /* 主题色定义 */
-
-  /* 来自Blue Topaz */
-  --h1-color: #85bb1f;
-  --h2-color: #27b822;
-  --h3-color: #1bbbbb;
-  --h4-color: #2f7fe9;
-  --h5-color: #a192f7;
-  --h6-color: #c173ee;
-
+:root {
   --text-folder-file-icon: rgb(45, 130, 204);
-
-  /* 来自 */
   --text-accent-custom: rgb(10, 133, 255);
-
-
+  --internal-color: rgb(183, 120, 196);
   --white: #fff;
 }
 
-
-.markdown-source-view {}
-
-.markdown-preview-view {
-
-  .cm-s-obsidian {
-    span.cm-link::before {
-      width: 1.5em;
-      height: inherit;
-      display: inline-block;
-      padding: 0.1em;
-      content: " ";
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-color: var(--text-accent-custom);
-      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
-    }
+.cm-s-obsidian {
+  span.cm-link {
+    color: var(--text-accent-custom);
   }
 
-}
+  span.cm-link:not(.cm-formatting)::before {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    // padding: 0.1em;
+    content: " ";
+    background-size: contain;
+    background-color: var(--text-accent-custom);
+    // -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/> </svg>');
 
-.cm-s-obsidian span.cm-link,
-.cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--text-accent-custom);
-}
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
 
-.markdown-preview-view h1,
-.HyperMD-header-1 .cm-header-1,
-.cm-s-obsidian .cm-header-1 {
-  color: var(--h1-color);
-}
-
-.markdown-preview-view h2,
-.HyperMD-header-2 .cm-header-2,
-.cm-s-obsidian .cm-header-2 {
-  color: var(--h2-color);
-}
-
-.markdown-preview-view h3,
-.HyperMD-header-3 .cm-header-3,
-.cm-s-obsidian .cm-header-3 {
-  color: var(--h3-color);
-}
-
-
-.markdown-preview-view h4,
-.HyperMD-header-4 .cm-header-4,
-.cm-s-obsidian .cm-header-4 {
-  color: var(--h4-color);
-}
-
-
-.markdown-preview-view h5,
-.HyperMD-header-5 .cm-header-5,
-.cm-s-obsidian .cm-header-5 {
-  color: var(--h5-color);
-}
-
-.markdown-preview-view h6,
-.HyperMD-header-6 .cm-header-6,
-.cm-s-obsidian .cm-header-6 {
-  color: var(--h6-color);
-}
-
-.nav-folder-title-content::before {
-  visibility: hidden;
-  width: 0 !important;
-}
-
-.modal-close-button {
-  width: 32;
-  height: 32;
-}
-
-.modal-close-button:before {
-  width: 32;
-  height: 32;
-}
-
-
-body:not(.remove-file-icons) .nav-folder-children .nav-file-title-content:first-child::before {
-  position: relative;
-  content: " ";
-  display: inline-block;
-  width: 0.9rem;
-  opacity: 0.9;
-  top: 2px;
-  height: 0.9rem;
-  margin-right: 5px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: var(--text-folder-file-icon);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
-}
-
-body:not(.remove-file-icons):not(.folder-style-change-options-colorful) .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
-  background-color: var(--white);
-}
-
-body.light-background-color-files:not(.remove-file-icons) .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
-  background-color: var(--text-folder-file-icon);
-  filter: hue-rotate(180deg);
-}
-
-body:not(.remove-file-icons) .nav-file-title.is-active .obsidian-icon-folder-icon+.nav-file-title-content::before {
-  display: none;
+  span.cm-hmd-internal-link {
+    color: var(--internal-color);
+  }
 }
