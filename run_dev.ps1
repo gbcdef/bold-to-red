@@ -1,0 +1,1 @@
+sass --watch src:"C:\Users\guibi\OneDrive\”¶”√\MyPrivateOb\.obsidian\snippets"
