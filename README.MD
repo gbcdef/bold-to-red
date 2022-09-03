@@ -1,7 +1,9 @@
 
 # Description
 
-A snippet for Obsidian. Enhancement:
+A snippet for Obsidian. [Download Snippet](release/bold-to-red.css)
+
+Enhancement:
 
 - Change file icon to `document`
 - Optimized link style:
