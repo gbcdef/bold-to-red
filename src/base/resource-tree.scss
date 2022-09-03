@@ -1,4 +1,10 @@
 
+:root {
+  --text-folder-file-icon: rgb(45, 130, 204);
+  --text-accent-custom: rgb(10, 133, 255);
+  --white: #fff;
+}
+
 .nav-folder-title-content::before {
   visibility: hidden;
   width: 0 !important;

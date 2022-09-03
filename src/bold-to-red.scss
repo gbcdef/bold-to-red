@@ -1,14 +1,10 @@
 @import 'base/headings', 'base/resource-tree';
 @import "base/link";
 
+$bold-color: #f8d753;
+
 .cm-strong,
 .markdown-preview-section strong {
-  color: #f8d753 !important;
+  color: $bold-color;
 }
 
-:root {
-  --text-folder-file-icon: rgb(45, 130, 204);
-  --text-accent-custom: rgb(10, 133, 255);
-  --internal-color: rgb(183, 120, 196);
-  --white: #fff;
-}
