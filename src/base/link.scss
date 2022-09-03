@@ -45,8 +45,7 @@ $icon_color: var(--text-accent-custom);
   }
 
   span.cm-hmd-internal-link {
-    color: var(--internal-color);
-
+    color: var(--internal-color) !important;
     .cm-underline {
       text-decoration-line: none;
     }
