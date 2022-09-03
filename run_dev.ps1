@@ -1,1 +1,1 @@
-sass --watch src:"C:\Users\guibi\OneDrive\应用\MyPrivateOb\.obsidian\snippets"
+sass --watch src:"C:\Users\guibi\OneDrive\应用\ObsidianMyOwn\.obsidian\snippets"
