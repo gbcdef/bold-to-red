@@ -12,6 +12,9 @@ Enhancement:
 - Optimized headinds style:
     - Add `h1` `h2` `h3` icon for headings from h1 to h3
 
+Demo based on `Obsidian Nord` theme:
+![](demo.png)
+
 # Development
 ## Install
 ```bash
