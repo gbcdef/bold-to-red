@@ -31,6 +31,10 @@ sass --watch src:release
 ## SVG Icons
 [Bootstrap Icons · Official open source SVG icon library for Bootstrap](https://icons.getbootstrap.com/)
 
+## Emoji
+[Full Emoji List, v14.0](https://unicode.org/emoji/charts-14.0/full-emoji-list.html)
+
+
 # Compile
 ```bash
 sass src/bold-to-red.scss  release/bold-to-red.css

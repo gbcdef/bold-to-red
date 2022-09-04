@@ -1,11 +1,15 @@
 @import 'base/headings';
 @import "base/link";
-@import 'base/resource-tree';
+@import 'folder/resource-tree';
+@import "folder/folder-outline";
+@import "folder/folder-icon";
+@import "editor/inline-code";
+@import "editor/auto-zoom-image";
+@import "editor/tag";
 
 $bold-color: #f8d753;
 
 .cm-strong,
 .markdown-preview-section strong {
-  color: $bold-color;
+  color: $bold-color !important;
 }
-

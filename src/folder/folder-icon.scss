@@ -1,0 +1,12 @@
+div[data-path="assets"] .nav-folder-title-content::before
+{
+  //content: "\01F525";
+  content: "\01F5C3";
+  visibility: visible;
+}
+
+div[data-path="pages"] .nav-folder-title-content::before
+{
+  content: "\01F4DD";
+  visibility: visible;
+}
