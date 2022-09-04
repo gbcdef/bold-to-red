@@ -37,5 +37,5 @@ sass --watch src:release
 
 # Compile
 ```bash
-sass src/bold-to-red.scss  release/bold-to-red.css
+sass src/bold-to-red.scss  bold-to-red.css
 ```
