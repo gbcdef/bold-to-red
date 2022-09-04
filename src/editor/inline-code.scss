@@ -1,17 +1,16 @@
+$code-background-color: #FFEBEB;
+
 :root {
   .theme-dark {
-    --code-color: #b51616;
-    --background-primary-alt: #ada5a5;
-
+    --code-color: #F04848;
   }
 }
 
 .cm-s-obsidian {
   span.cm-inline-code {
     color: var(--code-color);
-    background-color: var(--background-primary-alt);
+    background-color: $code-background-color !important;
     border-radius: 0.2em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding: 0.1em 0.3em;
   }
 }
