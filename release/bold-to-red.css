@@ -176,9 +176,70 @@ body:not(.remove-file-icons) .nav-file-title.is-active .obsidian-icon-folder-ico
   display: none;
 }
 
+.nav-folder-title {
+  font-weight: 900 !important;
+}
+
+div[data-path=assets] .nav-folder-title-content::before {
+  content: "🗃";
+  visibility: visible;
+}
+
+div[data-path=pages] .nav-folder-title-content::before {
+  content: "📝";
+  visibility: visible;
+}
+
+:root .theme-dark {
+  --code-color: #F04848;
+}
+
+.cm-s-obsidian span.cm-inline-code {
+  color: var(--code-color);
+  background-color: #FFEBEB !important;
+  border-radius: 0.2em;
+  padding: 0.1em 0.3em;
+}
+
+/* 作者: https://forum.obsidian.md/u/den/summary */
+/* 来源: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/29 */
+.markdown-preview-view img {
+  display: block;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* experiment with values */
+  transition: transform 0.25s ease;
+}
+
+.markdown-preview-view img:hover {
+  -webkit-transform: scale(1.8); /* experiment with values */
+  transform: scale(2);
+}
+
+.tag:not(.token) {
+  background-color: var(--text-accent);
+  border: none;
+  color: white;
+  font-size: 11px;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.tag:not(.token):hover {
+  color: white;
+  background-color: var(--text-accent-hover);
+}
+
 .cm-strong,
 .markdown-preview-section strong {
-  color: #f8d753;
+  color: #f8d753 !important;
 }
 
 /*# sourceMappingURL=bold-to-red.css.map */
