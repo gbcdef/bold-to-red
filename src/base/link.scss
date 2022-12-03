@@ -7,18 +7,52 @@ $icon_color: var(--text-accent-custom);
 
   &:hover {
     text-decoration-line: none;
+    opacity: 0.95;
+    background-color: rgba(255,255,255,1);
   }
 
   .cm-underline {
     text-decoration-line: none !important;
   }
+
+  &:not(.cm-formatting)::before {
+    width: $icon_size;
+    height: $icon_size;
+    display: inline-block;
+    content: " ";
+    background-size: contain;
+    background-color: var(--internal-color);
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
+  }
 }
 
 @mixin external-link {
+  color: $icon_color;
+
   text-decoration-line: none;
 
   &:hover {
     text-decoration-line: none;
+    opacity: 0.95;
+    background-color: rgba(255,255,255,1);
+  }
+
+  .cm-underline {
+    text-decoration-line: none !important;
+
+    &:hover {
+      text-decoration-line: none !important;
+    }
+  }
+
+  &.cm-link:not(.cm-formatting)::before {
+    width: $icon_size;
+    height: $icon_size;
+    display: inline-block;
+    content: " ";
+    background-size: contain;
+    background-color: $icon_color;
+    -webkit-mask-image: url('data:image/svg+xml;utf7,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/> </svg>');
   }
 }
 
@@ -40,57 +74,14 @@ $icon_color: var(--text-accent-custom);
 
 .cm-s-obsidian {
   span.cm-url {
-    color: $icon_color;
-
-    .cm-underline {
-      text-decoration-line: none;
-    }
-
-    &:hover {
-      .cm-underline {
-        text-decoration-line: none !important;
-      }
-    }
+    @include external-link;
   }
 
   span.cm-link {
-    color: $icon_color;
-
-    .cm-underline {
-      text-decoration-line: none !important;
-
-      &:hover {
-        text-decoration-line: none !important;
-      }
-    }
-
-    &.cm-link:not(.cm-formatting)::before {
-      width: $icon_size;
-      height: $icon_size;
-      display: inline-block;
-      content: " ";
-      background-size: contain;
-      background-color: $icon_color;
-      -webkit-mask-image: url('data:image/svg+xml;utf7,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/> </svg>');
-    }
+    @include external-link;
   }
 
   span.cm-hmd-internal-link {
-    color: var(--internal-color) !important;
-
-    .cm-underline {
-      text-decoration-line: none;
-    }
-
-    &:not(.cm-formatting)::before {
-      width: $icon_size;
-      height: $icon_size;
-      display: inline-block;
-      content: " ";
-      background-size: contain;
-      background-color: var(--internal-color);
-      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
-      //-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/> </svg>');
-    }
+    @include internal-link;
   }
 }
