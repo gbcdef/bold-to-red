@@ -9,10 +9,6 @@
   --h6-color: #c173ee;
 }
 
-.collapse-indicator {
-  margin-right: 1.02em;
-}
-
 .HyperMD-header-1,
 .markdown-preview-view h1,
 .HyperMD-header-1 .cm-header-1,
@@ -95,21 +91,94 @@
 :root .theme-dark {
   --internal-color: rgb(183, 120, 196);
 }
+:root .theme-light {
+  --internal-color: rgb(183, 120, 196);
+}
+
+.markdown-preview-view .internal-link {
+  text-decoration-line: none;
+  color: var(--internal-color) !important;
+}
+.markdown-preview-view .internal-link:hover {
+  text-decoration-line: none;
+  opacity: 0.95;
+  background-color: rgb(255, 255, 255);
+}
+.markdown-preview-view .internal-link .cm-underline {
+  text-decoration-line: none !important;
+}
+.markdown-preview-view .internal-link:not(.cm-formatting)::before {
+  width: 1.3em;
+  height: 1.3em;
+  display: inline-block;
+  content: " ";
+  background-size: contain;
+  background-color: var(--internal-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
+}
+.markdown-preview-view .external-link {
+  color: var(--text-accent-custom);
+  text-decoration-line: none;
+}
+.markdown-preview-view .external-link:hover {
+  text-decoration-line: none;
+  opacity: 0.95;
+  background-color: rgb(255, 255, 255);
+}
+.markdown-preview-view .external-link .cm-underline {
+  text-decoration-line: none !important;
+}
+.markdown-preview-view .external-link .cm-underline:hover {
+  text-decoration-line: none !important;
+}
+.markdown-preview-view .external-link.cm-link:not(.cm-formatting)::before {
+  width: 1.3em;
+  height: 1.3em;
+  display: inline-block;
+  content: " ";
+  background-size: contain;
+  background-color: var(--text-accent-custom);
+  -webkit-mask-image: url('data:image/svg+xml;utf7,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/> </svg>');
+}
 
 .cm-s-obsidian span.cm-url {
   color: var(--text-accent-custom);
+  text-decoration-line: none;
 }
-.cm-s-obsidian span.cm-url:hover .cm-underline {
-  text-decoration-line: underline;
+.cm-s-obsidian span.cm-url:hover {
+  text-decoration-line: none;
+  opacity: 0.95;
+  background-color: rgb(255, 255, 255);
+}
+.cm-s-obsidian span.cm-url .cm-underline {
+  text-decoration-line: none !important;
+}
+.cm-s-obsidian span.cm-url .cm-underline:hover {
+  text-decoration-line: none !important;
+}
+.cm-s-obsidian span.cm-url.cm-link:not(.cm-formatting)::before {
+  width: 1.3em;
+  height: 1.3em;
+  display: inline-block;
+  content: " ";
+  background-size: contain;
+  background-color: var(--text-accent-custom);
+  -webkit-mask-image: url('data:image/svg+xml;utf7,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/> </svg>');
 }
 .cm-s-obsidian span.cm-link {
   color: var(--text-accent-custom);
-}
-.cm-s-obsidian span.cm-link .cm-underline {
   text-decoration-line: none;
 }
+.cm-s-obsidian span.cm-link:hover {
+  text-decoration-line: none;
+  opacity: 0.95;
+  background-color: rgb(255, 255, 255);
+}
+.cm-s-obsidian span.cm-link .cm-underline {
+  text-decoration-line: none !important;
+}
 .cm-s-obsidian span.cm-link .cm-underline:hover {
-  text-decoration-line: underline;
+  text-decoration-line: none !important;
 }
 .cm-s-obsidian span.cm-link.cm-link:not(.cm-formatting)::before {
   width: 1.3em;
@@ -121,10 +190,16 @@
   -webkit-mask-image: url('data:image/svg+xml;utf7,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/> </svg>');
 }
 .cm-s-obsidian span.cm-hmd-internal-link {
+  text-decoration-line: none;
   color: var(--internal-color) !important;
 }
-.cm-s-obsidian span.cm-hmd-internal-link .cm-underline {
+.cm-s-obsidian span.cm-hmd-internal-link:hover {
   text-decoration-line: none;
+  opacity: 0.95;
+  background-color: rgb(255, 255, 255);
+}
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline {
+  text-decoration-line: none !important;
 }
 .cm-s-obsidian span.cm-hmd-internal-link:not(.cm-formatting)::before {
   width: 1.3em;
